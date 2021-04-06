@@ -39,14 +39,14 @@ with open(budgetdata_csv, 'r') as csvfile:
 
         prevamount = int(row[1])
 
-    avgchange = totalchange / totalmonths  
+    avgchange = totalchange / (totalmonths - 1)  
     print("Financial Analysis")
     print("----------------------------") 
     print("Total Months: " + str(totalmonths))
     currency = "${:.0f}".format(nettotalamount)
     print("Total: " + currency) 
     currency2 = "${:.2f}".format(avgchange)
-    #   print("Total of Changes: " + str(totalchange))
+    
     print("Average Change: " + currency2)
     currency3 = "${:.0f}".format(greatestincrease)
     currency4 = "${:.0f}".format(greatestdecrease)
