@@ -20,6 +20,7 @@ with open(budgetdata_csv, 'r') as csvfile:
     greatestdecrease = 0
 
     # Loop through the data
+
     for row in csvreader:
 
         totalmonths = totalmonths + 1
@@ -39,7 +40,12 @@ with open(budgetdata_csv, 'r') as csvfile:
 
         prevamount = int(row[1])
 
+    # Divide by number of changes, not months in the file
+
     avgchange = totalchange / (totalmonths - 1)  
+    
+    # Format and print to terminal
+    
     print("Financial Analysis")
     print("----------------------------") 
     print("Total Months: " + str(totalmonths))
@@ -52,5 +58,15 @@ with open(budgetdata_csv, 'r') as csvfile:
     currency4 = "${:.0f}".format(greatestdecrease)
     print("Greatest Increase in Profits: " + str(date1) + " (" + currency3 + ")")
     print("Greatest Decrease in Profits: " + str(date2) + " (" + currency4 + ")")
-
-
+    
+    # Export the output to a txt file 
+    
+    with open("myoutput.txt", "w") as text_file:
+        print(f"Financial Analysis", file=text_file)
+        print(f"----------------------------", file=text_file) 
+        print(f"Total Months: " + str(totalmonths), file=text_file)
+        print(f"Total: " + currency, file=text_file) 
+        print(f"Average Change: " + currency2, file=text_file )
+        print(f"Greatest Increase in Profits: " + str(date1) + " (" + currency3 + ")", file=text_file)
+        print(f"Greatest Decrease in Profits: " + str(date2) + " (" + currency4 + ")", file=text_file)
+        text_file.close()
