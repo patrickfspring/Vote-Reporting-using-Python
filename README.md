@@ -1,6 +1,13 @@
 # python-challenge
-Python challenge repository
+Improvement Process - Small Municipality Vote Reporting 
 
-This repository consists of the two scripts to process the financial records (aka budget data) via the csv input file and the voting results for the election in the small town.  The voting input file was also csv format.
-Each of the Python scripts has logic to open and write the results to an output txt file while also printing to the terminal display.
-Each assignment had analysis and resources folders set up, the scripts and outputs are in the analysis folders and input files are in the resources folders.
+The goal of this effort is to help a small town be able to update its reporting of its voting results.  The main source of voting data is an election_data csv file that contains Voter ID, County, and Candidate. 
+
+The requirements for reporting included capturing:
+1. Total number of votes cast.
+2. A complete list of candidates receiving votes.
+3. Percentage of votes each candiate won.
+4. Total number of Votes each candidate won.
+5. The winner of the election based on the popular vote.
+
+The developed Python script has logic to open and write the results to an output txt file while also printing to the terminal display.  The repo project had analysis and resources folders, the scripts and outputs are in the analysis folders and input files are in the resources folders.
