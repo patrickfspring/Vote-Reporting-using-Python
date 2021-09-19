@@ -1,4 +1,4 @@
-# python-challenge
+# Vote-Reporting-using-Python
 Improvement Process - Small Municipality Vote Reporting 
 
 The goal of this effort is to help a small town be able to update its reporting of its voting results.  The main source of voting data is an election_data csv file that contains Voter ID, County, and Candidate. 
